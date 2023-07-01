@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+
+  height: 100vh;
+}
+
+.gameBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 30px);
+  gap: 1px;
+  width: 90%;
+}
+
+.gridItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
