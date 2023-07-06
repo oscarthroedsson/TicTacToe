@@ -1,23 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;400;600;800&display=swap");
+/* ------------------- GENERALL STYLING ------------------- */
+:root {
+  --darkColor: #27262c;
+  --lightDark: #34323a;
+  --yellowColor: #edd63b;
+  --darkYellow: #d6c131;
+}
+
+* {
+  font-family: sora, Arial, Helvetica, sans-serif;
+}
+
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0px;
 
   height: 100vh;
+
+  background-color: var(--darkColor);
+}
+.contentContainer {
+  width: 300px;
+  text-align: center;
 }
 
+h1 {
+  margin: 10px 0px;
+  color: white;
+}
+button {
+  background-color: var(--yellowColor);
+  border: 3px solid;
+  border-color: var(--darkYellow);
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+button:focus {
+  box-shadow: 0px 0px 5px 0px rgba(237, 214, 59, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(237, 214, 59, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(237, 214, 59, 0.75);
+}
+
+/* ------------------- STYLING THE START DISPLAY ------------------- */
+
+.startDisplay {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.markerMenu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+  background-color: var(--lightDark);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
+}
+
+.startBtn {
+  background-color: var(--yellowColor);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+/* ------------------- STYLING GAMEBOARD ------------------- */
 .gameBoard {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 30px);
-  gap: 1px;
-  width: 90%;
+  grid-template-rows: repeat(3, 60px);
+  gap: 2px;
+  margin-block: 20px;
 }
 
 .gridItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  background-color: var(--lightDark);
+
+  color: white;
+}
+
+.gridItem:hover {
+  border: 2px solid white;
+}
+
+.scoreBoard {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+
+  color: white;
+  border-radius: 10px;
+  background-color: var(--lightDark);
+}
+
+.endGame {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
